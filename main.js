@@ -1,4 +1,0 @@
-/* 
-This will be the main body of the app where we pool all the required components together.
-items and components will be imported here and used to create the app. Use branches so that we can work on different parts of the app simultaneously.
-*/

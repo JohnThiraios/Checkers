@@ -88,6 +88,24 @@ h1 {
     150px 150px;
   background-color: rgb(150, 150, 150);
 }
+
+/* Breaks page, needs fix
+.cell.even {
+  width: 60rem;
+  height: 60rem;
+  border-radius: 8px;
+  box-shadow: 0 25px 50px rgb(0, 0, 0);
+  margin: auto;
+}
+
+.cell.odd {
+  width: 60rem;
+  height: 60rem;
+  border-radius: 8px;
+  box-shadow: 0 25px 50px rgb(251, 251, 251);
+  margin: auto;
+}
+*/
 .sidebar-section {
   display: flex;
   justify-content: center;

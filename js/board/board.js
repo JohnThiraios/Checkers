@@ -1,33 +1,15 @@
-//rudimentary checkers boardlogic
-class CheckersBoard {
-    constructor() {
-        this.board = [];
-        this.initializeBoard();
-    }
-//initialize the board
-    initializeBoard() {
-        for (let row = 0; row < 8; row++) {
-            this.board[row] = [];
-            for (let col = 0; col < 8; col++) {
-                if ((row + col) % 2 === 0) {
-                    this.board[row][col] = " ";
-                } else {
-                    this.board[row][col] = "X";
-                }
-            }
-        }
-    }
-//print the board
-    printBoard() {
-        for (let row = 0; row < 8; row++) {
-            let rowString = "";
-            for (let col = 0; col < 8; col++) {
-                rowString += this.board[row][col] + " ";
-            }
-            console.log(rowString);
-        }
-    }
-}
+const cells = document.querySelectorAll('.cell');
 
-const checkersBoard = new CheckersBoard();
-checkersBoard.printBoard();
+cells.forEach(cell => {
+  const cellId = parseInt(cell.dataset.cellId, 10);
+  if (cellId % 2 === 0) {
+    cell.classList.add('even');
+  } else {
+    cell.classList.add('odd');
+  }
+});
+/* Test clicker to display cell ID's and Class */
+document.addEventListener('click', function(event) {
+    console.log('You clicked on element with id: ' + event.target.id);
+    console.log('The class of the clicked element is: ' + event.target.className);
+  });
