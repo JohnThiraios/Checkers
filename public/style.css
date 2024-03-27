@@ -77,7 +77,7 @@ h1 {
   position: relative;
 }
 
-/* GAME */
+/* GAME 
 .checkerboard {
   width: 60rem;
   height: 60rem;
@@ -88,12 +88,32 @@ h1 {
     150px 150px;
   background-color: rgb(150, 150, 150);
 }
-.sidebar-section {
+*/
+.checkerboard {
   display: flex;
-  justify-content: center;
-  align-self: center;
+  flex-wrap: wrap;
+  width: 60rem; /* Adjust to fit your design */
+  height: 60rem; /* Adjust to fit your design */
+  /* Other styles as needed... */
 }
 
+.row {
+  display: flex;
+  width: 100%;
+}
+
+.cell {
+  width: 7.5rem; /* Adjust to fit your design */
+  height: 7.5rem; /* Adjust to fit your design */
+}
+
+.cell.black {
+  background-color: rgb(0, 0, 0); /* Set the background color for even cells */
+}
+
+.cell.white {
+  background-color: rgb(150, 150, 150); /* Set the background color for odd cells */
+}
 .sidebar {
   margin-left: 2rem;
   padding: 1.3rem;
