@@ -108,11 +108,11 @@ h1 {
 }
 
 .cell.black {
-  background-color: #000000; /* Set the background color for even cells */
+  background-color: rgb(0, 0, 0); /* Set the background color for even cells */
 }
 
 .cell.white {
-  background-color: #fff; /* Set the background color for odd cells */
+  background-color: rgb(150, 150, 150); /* Set the background color for odd cells */
 }
 .sidebar {
   margin-left: 2rem;
