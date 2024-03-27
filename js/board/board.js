@@ -5,9 +5,9 @@ rows.forEach((row, rowIndex) => {
   
   cells.forEach((cell, cellIndex) => {
     if ((rowIndex + cellIndex) % 2 === 0) {
-      cell.classList.add('even');
+      cell.classList.add('white');
     } else {
-      cell.classList.add('odd');
+      cell.classList.add('black');
     }
   });
 });
