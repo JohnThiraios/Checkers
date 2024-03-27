@@ -1,17 +1,18 @@
-document.addEventListener('DOMContentLoaded', (event) => {
-    const cells = document.querySelectorAll('.cell');
+const rows = document.querySelectorAll('.row');
+
+rows.forEach((row, rowIndex) => {
+  const cells = row.querySelectorAll('.cell');
   
-    cells.forEach(cell => {
-      const cellId = parseInt(cell.dataset.cellId, 10);
-      if (cellId % 2 === 0) {
-        cell.classList.add('even');
-      } else {
-        cell.classList.add('odd');
-      }
-    });
+  cells.forEach((cell, cellIndex) => {
+    if ((rowIndex + cellIndex) % 2 === 0) {
+      cell.classList.add('even');
+    } else {
+      cell.classList.add('odd');
+    }
   });
+});
 /* Test clicker to display cell ID's and Class */
 document.addEventListener('click', function(event) {
-    console.log('You clicked on element with id: ' + event.target.id);
+    console.log('You clicked on element with data-cell-id: ' + event.target.dataset.cellId);
     console.log('The class of the clicked element is: ' + event.target.className);
-  });
+});
