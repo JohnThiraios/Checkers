@@ -1,0 +1,223 @@
+/* 
+--- 01 TYPOGRAPHY SYSTEM
+ - Font sizes(px)
+10 / 12 / 14 / 16 / 18 / 20 / 24 / 30 / 36 / 44 / 52 / 62 / 74 / 86 / 98
+
+-- Font Sizes (px)
+10 / 12 / 14 / 16 / 18 / 24 / 30 / 36 / 44 / 52 / 62 / 74 / 86 / 98
+
+ - Font weights: 
+Default: 400
+Medium: 500
+Semi-bold: 600
+Bold: 700
+
+ - Line heights
+Default: 1
+Small: 1.05
+Medium: 1.2
+Paragraph Default: 1.6
+Large: 1.8
+
+ - Letter Spacing
+ - 0.5px;
+ - 0.75px;
+
+SPACING SYSTEM (px)
+ 2 / 4 / 8 / 12 / 16 / 24 / 32 / 48 / 64 / 80 / 96 / 128
+
+---02 Colors
+Primary : 
+Tints:  
+Shades: 
+Accents:
+Greys:
+#888
+#dddddd
+#555
+
+--- 05 Shadows
+
+--- 06 Border-Radius
+Default: 9px
+Medium: 11px
+
+--- 07 Whitespace
+ */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+html {
+  font-size: 62.5%;
+  background: -webkit-linear-gradient(to right, #24243e, #302b63, #0f0c29);
+  background: linear-gradient(to right, #24243e, #302b63, #0f0c29);
+}
+
+body {
+  font-family: "Tauri", sans-serif;
+  line-height: 1;
+  font-weight: 400;
+  color: #888;
+  height: 100vh;
+  width: 100%;
+  background: #16222a; /* fallback for older browsers */
+  background: #0f0c29; /* fallback for older browsers */
+}
+
+/* HEADER */
+h1 {
+  font-size: 4.8rem;
+  font-weight: 700;
+  text-align: center;
+}
+.header {
+  padding: 2rem;
+  position: relative;
+}
+
+/* GAME */
+.checkerboard {
+  width: 60rem;
+  height: 60rem;
+  border-radius: 8px;
+  box-shadow: 0 25px 50px rgb(0, 0, 0);
+  margin: auto;
+  background: repeating-conic-gradient(#000000 0% 25%, transparent 0% 50%) 50% /
+    150px 150px;
+  background-color: rgb(150, 150, 150);
+}
+.sidebar-section {
+  display: flex;
+  justify-content: center;
+  align-self: center;
+}
+
+.sidebar {
+  margin-left: 2rem;
+  padding: 1.3rem;
+  width: 100%;
+  line-height: 1.8;
+  font-size: 1.4em;
+  background-color: #12121f;
+  overflow: auto;
+  border-radius: 8px;
+}
+.grid-section {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  margin-top: 8rem;
+  gap: 2rem;
+}
+.btn {
+  cursor: pointer;
+  width: 5rem;
+  height: 5rem;
+  padding: 1rem;
+  background-color: #666678;
+  border-radius: 50px;
+}
+
+.btn-div {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: none;
+  outline: none;
+  font-size: 5rem;
+  padding: 3rem;
+}
+
+.btn:hover {
+  background-color: #d3d3d8;
+}
+
+/* FOOTER */
+footer {
+  display: flex;
+  font-size: 2rem;
+  font-style: italic;
+  color: #dddddd;
+  margin-top: 6rem;
+}
+
+/* LINK MENU */
+.animated-menu {
+  position: absolute;
+  top: 700px;
+  right: 0;
+}
+.animated-menu .menu {
+  position: relative;
+  width: 300px;
+  height: 300px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.animated-menu .menu .toggle {
+  position: absolute;
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  color: #fff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  z-index: 100;
+  font-size: 2em;
+  transition: transform 0.5s;
+}
+.menu .toggle i {
+  font-size: 45px;
+}
+.animated-menu .menu li {
+  position: absolute;
+  left: 0;
+  list-style: none;
+  transition: 0.5s;
+  margin: 11px;
+  transition-delay: calc(0.04s * var(--i));
+  transform: rotate(0deg) translate(110px);
+  transform-origin: 140px;
+}
+.animated-menu .menu li a {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  font-size: 1.6em;
+  transform: rotate(calc(-20deg * var(--i)));
+  transition: 0.3s;
+  border: 2px solid #fff;
+  padding: 1.1em;
+  color: #0ef;
+}
+.animated-menu .menu.active .toggle {
+  transform: rotate(1260deg);
+}
+.animated-menu .menu.active li {
+  transform: rotate(calc(20deg * var(--i))) translateX(0px);
+}
+.animated-menu .menu li a:hover {
+  background: #0ef;
+  transition: 0.2s ease-in-out;
+  overflow: hidden;
+  color: #000;
+  border: none;
+}
+
+.hidden {
+  opacity: 0%;
+  transition: 0.5s;
+  pointer-events: none;
+}
